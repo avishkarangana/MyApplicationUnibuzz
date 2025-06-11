@@ -21,11 +21,12 @@ import java.util.Map;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText usernameField, emailField, passwordField;
+    private EditText usernameField, emailField, passwordField, confirmPasswordField;
     private Button signUpButton;
     private TextView signInLink;
-    private ImageView showPassword;
+    private ImageView showPassword, showConfirmPassword;
     private boolean passwordVisible = false;
+    private boolean confirmPasswordVisible = false;
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
@@ -38,20 +39,29 @@ public class SignUpActivity extends AppCompatActivity {
         usernameField = findViewById(R.id.username);
         emailField = findViewById(R.id.email);
         passwordField = findViewById(R.id.password);
+        confirmPasswordField = findViewById(R.id.confirm_password);
         signUpButton = findViewById(R.id.sign_up_btn);
         signInLink = findViewById(R.id.sign_in_link);
         showPassword = findViewById(R.id.show_password);
+        showConfirmPassword = findViewById(R.id.show_confirm_password);
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
+        // Sign up button logic
         signUpButton.setOnClickListener(v -> {
             String username = usernameField.getText().toString().trim();
             String email = emailField.getText().toString().trim();
             String password = passwordField.getText().toString().trim();
+            String confirmPassword = confirmPasswordField.getText().toString().trim();
 
-            if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (!password.equals(confirmPassword)) {
+                showAlert("Password Mismatch", "Passwords do not match.");
                 return;
             }
 
@@ -69,13 +79,11 @@ public class SignUpActivity extends AppCompatActivity {
                                 db.collection("users").document(userId).set(user)
                                         .addOnSuccessListener(aVoid -> {
                                             Toast.makeText(this, "Sign up successful! Please log in.", Toast.LENGTH_SHORT).show();
-                                            mAuth.signOut(); // Sign out after registration
-                                            startActivity(new Intent(this, LoginActivity.class)); // Redirect to login
+                                            mAuth.signOut();
+                                            startActivity(new Intent(this, LoginActivity.class));
                                             finish();
                                         })
-                                        .addOnFailureListener(e ->
-                                                showAlert("Error", "Failed to save user data.")
-                                        );
+                                        .addOnFailureListener(e -> showAlert("Error", "Failed to save user data."));
                             }
                         } else {
                             showAlert("Sign Up Failed", task.getException() != null
@@ -85,6 +93,7 @@ public class SignUpActivity extends AppCompatActivity {
                     });
         });
 
+        // Show/Hide password logic
         showPassword.setOnClickListener(v -> {
             passwordVisible = !passwordVisible;
             passwordField.setInputType(passwordVisible
@@ -94,6 +103,16 @@ public class SignUpActivity extends AppCompatActivity {
             showPassword.setImageResource(passwordVisible ? R.drawable.ic_visibility : R.drawable.visibility_off);
         });
 
+        showConfirmPassword.setOnClickListener(v -> {
+            confirmPasswordVisible = !confirmPasswordVisible;
+            confirmPasswordField.setInputType(confirmPasswordVisible
+                    ? InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    : InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            confirmPasswordField.setSelection(confirmPasswordField.getText().length());
+            showConfirmPassword.setImageResource(confirmPasswordVisible ? R.drawable.ic_visibility : R.drawable.visibility_off);
+        });
+
+        // Navigate to login
         signInLink.setOnClickListener(v -> {
             startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
             finish();
