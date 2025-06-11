@@ -21,12 +21,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cricket" />
+                android:src="@drawable/events_pic1" />
 
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="Cricket League to be Introduced in University"
+                android:text="Annual University Seminar Draws Massive Participation"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp" />
@@ -34,14 +34,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="April 25, 2025"
+                android:text="May 20, 2025"
                 android:textSize="12sp"
                 android:layout_marginTop="4dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Our university is launching a student cricket league to promote sportsmanship and healthy living."
+                android:text="Hundreds of students and faculty gathred for the university's annual seminar, featuring keynote speakers and academic presentations.."
                 android:layout_marginTop="4dp" />
         </LinearLayout>
 
@@ -57,12 +57,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/esports" />
+                android:src="@drawable/events_pic2" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="E Sports Champion"
+                android:text="Tech Innovators Triumph at University Innovation Summit"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:layout_marginTop="8dp" />
@@ -70,14 +70,14 @@
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="April 24, 2025"
+                android:text="May 02, 2025"
                 android:textSize="12sp"
                 android:layout_marginTop="4dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Our university is adding e-sports to its athletics program, recognizing the rise of competitive gaming."
+                android:text="Team 'TECH VISION' clinched 1st place at the University Technology Innovation Event for their groundbreaking AI-powered health monitoring system."
                 android:layout_marginTop="4dp" />
         </LinearLayout>
 
