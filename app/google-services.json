@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "554667673275",
+    "project_id": "unibuzz-application",
+    "storage_bucket": "unibuzz-application.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554667673275:android:4cd6e0e2601e8a17830b9e",
+        "android_client_info": {
+          "package_name": "lk.cmb.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnvEkcu7CdqknELnibRb9K2-POvfFafJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

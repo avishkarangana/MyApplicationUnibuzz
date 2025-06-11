@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top bar with icon buttons -->
+
+    <!-- Fragment container -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="#EEEEEE"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp">
+
+        <!-- Developer info icon -->
+        <ImageView
+            android:id="@+id/btn_developer_info"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Developer Info"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_developer" />
+
+        <!-- User profile icon -->
+        <ImageView
+            android:id="@+id/btn_user_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="User Profile"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#0000AA"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/nav_sports"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_sports"
+                android:src="@drawable/ic_sports"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/label_sports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_academic"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_academic"
+                android:src="@drawable/ic_academic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/label_academic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Academic"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_events"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_events"
+                android:src="@drawable/ic_events"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/label_events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Events"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

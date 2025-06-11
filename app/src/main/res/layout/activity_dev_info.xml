@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".DevInfoActivity">
+
+    <!-- Developer Image -->
+
+    <!-- Info Card -->
+
+    <ImageView
+        android:id="@+id/devImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/yellow_circle_border"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/infoCard"
+        android:layout_width="427dp"
+        android:layout_height="486dp"
+        android:background="@drawable/rounded_blue_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/devImage"
+        app:layout_constraintVertical_bias="0.989">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23dp"
+            android:text="Name: K.G.A. Rangana"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Student No: 2022t01569"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Personal Statement: This release includes core features, performance improvements, and an enhanced UI experience tailored for academic and personal use."
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="77dp"
+            android:text="Release Version: 2024.2.1"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exitButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_yellow"
+            android:text="⏏ Exit"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
