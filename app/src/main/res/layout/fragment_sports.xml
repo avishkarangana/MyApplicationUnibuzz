@@ -81,6 +81,43 @@
                 android:layout_marginTop="4dp" />
         </LinearLayout>
 
+        <!-- Second News Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#BBDEFB"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/atheletic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="University Gears Up for Annual Sports Meet"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="April 24, 2025"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The university is set to host its annual athletic sports event next month, promising exciting competitions and team spirit."
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
 
