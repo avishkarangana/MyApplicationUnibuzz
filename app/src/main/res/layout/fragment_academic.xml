@@ -21,12 +21,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cricket" />
+                android:src="@drawable/academic_pic1" />
 
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="Cricket League to be Introduced in University"
+                android:text="Graduation Glory: Class of 2025"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp" />
@@ -34,14 +34,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="April 25, 2025"
+                android:text="May 15, 2025"
                 android:textSize="12sp"
                 android:layout_marginTop="4dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Our university is launching a student cricket league to promote sportsmanship and healthy living."
+                android:text="University celebrates a record number of joyful graduates in a vibrant 2025 convacation ceremony."
                 android:layout_marginTop="4dp" />
         </LinearLayout>
 
@@ -57,12 +57,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/esports" />
+                android:src="@drawable/academic_pic2" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="E Sports Champion"
+                android:text="University Final Exams Kick off smmothly Across All Faculties."
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:layout_marginTop="8dp" />
@@ -70,14 +70,14 @@
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="April 24, 2025"
+                android:text="May 28, 2025"
                 android:textSize="12sp"
                 android:layout_marginTop="4dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Our university is adding e-sports to its athletics program, recognizing the rise of competitive gaming."
+                android:text="Students begin their end-of-semester university exams with determination and focus this week."
                 android:layout_marginTop="4dp" />
         </LinearLayout>
 
