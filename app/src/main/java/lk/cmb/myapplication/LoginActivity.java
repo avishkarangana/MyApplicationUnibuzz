@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
                 return;
             }
 
-            // 🔍 Query Firestore where username equals input
+            //  Query Firestore where username equals input
             db.collection("users").whereEqualTo("username", username).get()
                     .addOnSuccessListener(querySnapshot -> {
                         if (!querySnapshot.isEmpty()) {
@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                     .addOnFailureListener(e -> showAlert("Error", "Failed to fetch user data. Try again."));
         });
 
-        // 👁️ Toggle password visibility
+        //  Toggle password visibility
         showPassword.setOnClickListener(v -> {
             passwordVisible = !passwordVisible;
             passwordField.setInputType(passwordVisible
@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    // 🔔 Show alert dialog
+    //  Show alert dialog
     private void showAlert(String title, String message) {
         new AlertDialog.Builder(LoginActivity.this)
                 .setTitle(title)
