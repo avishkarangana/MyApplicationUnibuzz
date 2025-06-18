@@ -58,8 +58,8 @@
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/edittext_bg"
-                android:padding="8dp" />
+                android:inputType="text"
+                android:paddingEnd="48dp" />
 
             <TextView
                 android:layout_width="wrap_content"
